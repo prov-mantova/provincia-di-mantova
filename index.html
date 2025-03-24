@@ -10,13 +10,32 @@
     <div class="lightbox-cover" data-bind="css: { 'disable-lightbox': svr.fAllowGrayOutLightBox &amp;&amp; showLightboxProgress() }"></div>
     <!-- CSS -->
     <style>
-       
         .center-div {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white; /* White background */
+            width: 80%; /* Adjust width */
+            max-width: 600px; /* Maximum width */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+            border-radius: 8px; /* Optional rounded corners */
+            display: flex;
+            flex-direction: column; /* Arrange sub-divs vertically */
+            gap: 10px; /* Space between sub-divs */
         }
+
+        .sub-div {
+            background-color: #f4f4f4; /* Light background for sub-divs */
+            padding: 10px;
+            border-radius: 5px; /* Rounded corners for sub-divs */
+            border: 1px solid #ddd; /* Border for each sub-div */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -26,9 +45,20 @@
         /* Basic Typography */
         body {
             background-image: url('back.png');
-
+            background-size: cover;
             line-height: 1.6;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            height: 100vh; /* Ensure body takes up full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* You can also add styles for the lightbox if needed */
+        .lightbox-cover {
+            display: none; /* Or make it visible based on your condition */
         }
     </style>
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
@@ -36,12 +66,22 @@
 <body>
     <!-- Header Section -->
     <header>
-
+        <!-- Any header content goes here -->
     </header>
 
     <!-- Main Content -->
     <main>
-        <div class="center-div"></div>
+        <!-- Central White Div -->
+        <div class="center-div">
+            <!-- Sub Divs (7 total) -->
+            <div class="sub-div">Sub Div 1</div>
+            <div class="sub-div">Sub Div 2</div>
+            <div class="sub-div">Sub Div 3</div>
+            <div class="sub-div">Sub Div 4</div>
+            <div class="sub-div">Sub Div 5</div>
+            <div class="sub-div">Sub Div 6</div>
+            <div class="sub-div">Sub Div 7</div>
+        </div>
     </main>
 
     <!-- JavaScript -->
