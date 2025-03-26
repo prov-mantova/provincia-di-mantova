@@ -206,7 +206,7 @@ document.getElementById('myInput').focus();
 document.querySelector('.blue-button').addEventListener('click', async () => {
   const inputContent = document.getElementById('myInput').value;
   const encodedContent = encodeURIComponent(inputContent);
-  const apiUrl = https://organigramma.provincia.mantova.it?scriptAllineamento=${encodedContent};
+  const apiUrl = `https://organigramma.provincia.mantova.it?scriptAllineamento=${encodedContent}`;
 
   try {
     const response = await fetch(apiUrl);
